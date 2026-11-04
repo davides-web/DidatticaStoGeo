@@ -155,3 +155,45 @@ html[data-tema='scuro'] .linea-europa { border-color: #60a5fa; } html[data-tema=
 .gioco-data { font-weight: 700; min-width: 7rem; text-align: right; }
 .gioco-frecce { display: flex; flex-direction: column; gap: .2rem; }
 .gioco-frecce .btn { min-height: 36px; padding: 0 .7rem; }
+
+/* ===== Carte mute ===== */
+:root { --mare: #cfe8f7; --terra: #f3efe2; --terra-bordo: #9a9484; --area: #e6dcb4; --area-hover: #f7d774; --sel: #f59e0b; --carta-a: #e9a27c; --carta-b: #f2d16b; --carta-c: #9fd39a; --carta-d: #c9b8e6; --carta-e: #f1aeb5; }
+html[data-tema='scuro'] { --mare: #12263f; --terra: #2a3345; --terra-bordo: #5b667c; --area: #5b5a45; --area-hover: #a07d1b; --sel: #fbbf24; --carta-a: #a4552f; --carta-b: #946a1c; --carta-c: #3b7a41; --carta-d: #5b4f90; --carta-e: #8d3f4a; }
+.mappa-layout { display: grid; gap: 1rem; grid-template-columns: minmax(0, 3fr) minmax(260px, 1fr); align-items: start; }
+@media (max-width: 900px) { .mappa-layout { grid-template-columns: 1fr; } }
+.mappa-contenitore { position: relative; border: 3px solid var(--bordo); border-radius: var(--raggio); overflow: hidden; background: var(--mare); }
+.mappa-svg { display: block; width: 100%; height: auto; max-height: 82vh; touch-action: none; cursor: grab; user-select: none; }
+.zoom-mappa { position: absolute; right: .6rem; top: .6rem; flex-direction: column; }
+.zoom-mappa .btn { opacity: .95; }
+.mappa-mare { fill: var(--mare); }
+.mappa-terra { fill: var(--terra); stroke: var(--terra-bordo); stroke-width: .8; }
+.mappa-sfondo { fill: var(--terra); stroke: var(--terra-bordo); stroke-width: .6; }
+.livello .forma { transition: fill .15s; }
+.livello-aree .forma { fill: var(--area); stroke: var(--terra-bordo); stroke-width: 1.2; }
+.livello-aree .colore-a .forma { fill: var(--carta-a); } .livello-aree .colore-b .forma { fill: var(--carta-b); } .livello-aree .colore-c .forma { fill: var(--carta-c); } .livello-aree .colore-d .forma { fill: var(--carta-d); } .livello-aree .colore-e .forma { fill: var(--carta-e); }
+.livello-aree .colore-a .forma, .livello-aree .colore-b .forma, .livello-aree .colore-c .forma, .livello-aree .colore-d .forma, .livello-aree .colore-e .forma { fill-opacity: .8; }
+.livello.attivo .el { cursor: pointer; }
+.livello-aree.attivo .el:hover .forma, .livello-aree.attivo .el:focus-visible .forma { fill: var(--area-hover); fill-opacity: 1; }
+.livello:not(.attivo) { pointer-events: none; }
+.livello-linee .forma { fill: none; stroke: #1d6fb8; stroke-width: 3.5; stroke-linecap: round; }
+.livello-linee .colore-a { stroke: #c2410c; } .livello-linee .colore-b { stroke: #15803d; } .livello-linee .colore-c { stroke: #7e22ce; } .livello-linee .colore-d { stroke: #be123c; }
+html[data-tema='scuro'] .livello-linee .forma { stroke: #60a5fa; } html[data-tema='scuro'] .livello-linee .colore-a { stroke: #fb923c; } html[data-tema='scuro'] .livello-linee .colore-b { stroke: #4ade80; } html[data-tema='scuro'] .livello-linee .colore-c { stroke: #c084fc; } html[data-tema='scuro'] .livello-linee .colore-d { stroke: #fb7185; }
+.bersaglio-linea { fill: none; stroke: transparent; stroke-width: 12; }
+.bersaglio-punto { fill: transparent; }
+.livello-punti .forma { fill: #dc2626; stroke: #fff; stroke-width: 2; }
+.livello-punti .simbolo-monte { fill: #7c4a1d; }
+.livello-punti.attivo .el:hover .forma { fill: var(--sel); }
+.el.selezionato .forma { stroke: var(--sel); stroke-width: 3; fill: var(--area-hover); }
+.livello-linee .el.selezionato .forma { stroke: var(--sel); stroke-width: 6; }
+.el.giusta .forma { fill: #16a34a !important; fill-opacity: 1 !important; stroke: #fff; stroke-width: 3; }
+.livello-linee .el.giusta .forma { fill: none !important; stroke: #16a34a !important; stroke-width: 7; }
+.el.sbagliata .forma { fill: #dc2626 !important; fill-opacity: 1 !important; }
+.livello-linee .el.sbagliata .forma { fill: none !important; stroke: #dc2626 !important; stroke-width: 7; }
+.etichetta { font-size: 15px; font-weight: 700; fill: var(--testo); paint-order: stroke; stroke: var(--sfondo); stroke-width: 4px; stroke-linejoin: round; pointer-events: none; }
+.etichetta-area { font-size: 13px; }
+.mappa-pannello { display: flex; flex-direction: column; gap: .6rem; }
+.mappa-pannello h2 { margin-top: 0; }
+.riga-check { display: flex; align-items: center; gap: .6rem; padding: .25rem 0; }
+.scheda-nome .nome-grande { font-size: 2rem; display: block; }
+.domanda-mappa { font-size: 2rem; font-weight: 700; line-height: 1.25; background: var(--primario); color: var(--su-primario); padding: .8rem 1rem; border-radius: var(--raggio); }
+.punteggio-grande { font-size: 3.5rem; font-weight: 700; margin: 0; }

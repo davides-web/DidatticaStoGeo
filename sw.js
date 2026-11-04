@@ -3,7 +3,7 @@
 // Strategia: prima la copia salvata (veloce), intanto si scarica quella nuova per la volta dopo.
 
 // <GENERATO>
-const VERSIONE = 'bf1032f6c4';
+const VERSIONE = '2159409679';
 const FILE_APP = [
   "./",
   "index.html",
@@ -13,11 +13,13 @@ const FILE_APP = [
   "js/accessibilita.js",
   "js/app.js",
   "js/core/contenuti.js",
+  "js/core/mappe.js",
   "js/core/timeline.js",
   "js/core/utils.js",
   "js/core/validazione.js",
   "js/dom.js",
   "js/pagine/home.js",
+  "js/pagine/mappe.js",
   "js/pagine/studio.js",
   "js/pagine/timeline.js",
   "js/voce.js",
@@ -26,6 +28,11 @@ const FILE_APP = [
   "contenuti/indice.json",
   "contenuti/storia-1.json",
   "contenuti/storia-2.json",
+  "mappe/carlo-magno.json",
+  "mappe/europa.json",
+  "mappe/italia-comuni.json",
+  "mappe/italia.json",
+  "mappe/scoperte-geografiche.json",
   "fonts/atkinson-hyperlegible-latin-400-normal.woff2",
   "fonts/atkinson-hyperlegible-latin-700-normal.woff2",
   "fonts/opendyslexic-latin-400-normal.woff2",
