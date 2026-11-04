@@ -1,0 +1,12 @@
+{
+  "name": "didattica-sto-geo",
+  "version": "1.0.0",
+  "description": "Web app didattica di storia e geografia per la scuola secondaria di primo grado (classi prime e seconde).",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "aggiorna-sw": "node strumenti/aggiorna-sw.js"
+  },
+  "license": "MIT"
+}

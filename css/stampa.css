@@ -1,0 +1,5 @@
+/* Regole di stampa generali (le verifiche hanno regole proprie, vedi sezione Verifiche) */
+@page { size: A4; margin: 15mm; }
+.testata, .azioni, #menu, .salta, .no-stampa { display: none !important; }
+body { background: #fff !important; color: #000 !important; font-size: 12pt; }
+main { padding: 0; max-width: none; }
