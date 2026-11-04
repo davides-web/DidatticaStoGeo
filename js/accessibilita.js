@@ -3,7 +3,7 @@
 import { h, sostituisci } from './dom.js';
 
 const CHIAVE = 'didattica-impostazioni';
-const PREDEFINITE = { tema: 'auto', crema: false, font: 'standard', interlinea: false, dimensione: 100, contrasto: false };
+const PREDEFINITE = { tema: 'auto', crema: false, font: 'standard', interlinea: false, dimensione: 100, contrasto: false, righello: false };
 let imp = { ...PREDEFINITE };
 
 function carica() {
@@ -23,13 +23,26 @@ export function applicaImpostazioni() {
   r.classList.toggle('crema', imp.crema);
   r.classList.toggle('interlinea', imp.interlinea);
   r.classList.toggle('contrasto', imp.contrasto);
+  r.classList.toggle('righello-attivo', imp.righello);
+  // Con testi molto grandi la testata non resta fissa: occuperebbe troppo schermo
+  r.classList.toggle('testata-statica', imp.dimensione > 110 || imp.font === 'dislessia');
   r.dataset.font = imp.font;
   r.style.fontSize = `${imp.dimensione}%`;
+}
+
+/** La fascia del righello di lettura segue il puntatore (mouse, penna o dito). */
+function preparaRighello() {
+  const fascia = h('div', { class: 'righello', 'aria-hidden': 'true' });
+  document.body.append(fascia);
+  const segui = (e) => { fascia.style.top = `${e.clientY - fascia.offsetHeight / 2}px`; };
+  addEventListener('pointermove', segui, { passive: true });
+  addEventListener('pointerdown', segui, { passive: true });
 }
 
 export function inizializza() {
   carica();
   applicaImpostazioni();
+  preparaRighello();
   matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applicaImpostazioni);
 }
 
@@ -70,6 +83,7 @@ export function creaPannello() {
       interruttore('interlinea', 'Interlinea ampia', 'Più spazio tra righe e lettere'),
       interruttore('crema', 'Sfondo color crema', 'Meno abbagliante, utile per la dislessia'),
       interruttore('contrasto', 'Alto contrasto', 'Testo nero/bianco e bordi marcati'),
+      interruttore('righello', 'Righello di lettura', 'Una fascia evidenziata segue il mouse o il dito'),
       h('div', { class: 'azioni' },
         h('button', { class: 'btn', onclick: () => { imp = { ...PREDEFINITE }; salva(); applicaImpostazioni(); disegna(); } }, 'Ripristina'),
         h('button', { class: 'btn primario', onclick: () => dlg.close() }, 'Chiudi')));

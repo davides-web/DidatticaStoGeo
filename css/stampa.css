@@ -3,3 +3,15 @@
 .testata, .azioni, #menu, .salta, .no-stampa { display: none !important; }
 body { background: #fff !important; color: #000 !important; font-size: 12pt; }
 main { padding: 0; max-width: none; }
+
+/* Verifiche: solo i fogli, uno per pagina, bianco e nero */
+.comandi, .no-stampa, .anteprima + * { display: none !important; }
+.anteprima { display: block; margin: 0; }
+.foglio { width: auto; min-height: 0; padding: 0; margin: 0; box-shadow: none; border-radius: 0; break-after: page; page-break-after: always; font-size: 11.5pt; }
+.foglio:last-child { break-after: auto; page-break-after: auto; }
+.foglio-semplice { font-size: 14pt; }
+.domanda { break-inside: avoid; page-break-inside: avoid; }
+.foglio tr { break-inside: avoid; }
+
+.righello { display: none !important; }
+.parte h2, .passi { break-after: avoid; }
