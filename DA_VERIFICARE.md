@@ -176,3 +176,12 @@ Ho scritto i contenuti con cura, ma non sono un manuale e non sostituiscono la v
 - [ ] **Convenzione ONU 1989** sui diritti dell'infanzia.
 - [ ] **Dichiarazione dei diritti della donna 1791** (Olympe de Gouges): presentata come testo di rivendicazione.
 - [ ] I **collegamenti** (campo `collegamenti`) tra argomenti di Educazione civica e di storia sono miei suggerimenti: modificali liberamente.
+
+## Carte mute
+
+- [ ] **Fiumi, monti, capoluoghi e capitali**: posizioni disegnate a mano (approssimate, 2 cifre decimali di gradi); i fiumi sono linee semplificate, non il tracciato esatto.
+- [ ] **Impero carolingio (814)** e **Stato della Chiesa**: confini approssimati a mano; i confini reali variarono e sono discussi (Marca Hispanica, Ostmark, rapporto con i Sassoni e gli Slavi).
+- [ ] **«Italia dei Comuni»**: i territori sono ricostruiti con le **regioni attuali** (per esempio la Romagna, in parte Stato della Chiesa, è inclusa nell'Emilia-Romagna dei Comuni; Abruzzo e Molise nel Regno di Sicilia; Valle d'Aosta, Trentino e Friuli come «altri territori»).
+- [ ] **Scoperte geografiche**: rotte schematiche (i viaggi reali furono più complessi); Caboto indicato come «Giovanni Caboto» (nato a Genova o Gaeta, al servizio dell'Inghilterra).
+- [ ] **Confini degli Stati d'Europa**: dati Natural Earth, che rappresentano i confini de facto (per esempio il Kosovo come Stato; la Russia e l'Ucraina secondo la rappresentazione del dataset).
+- [ ] **Nomi italiani degli Stati** (per esempio «Macedonia del Nord», «Cechia/Repubblica Ceca», «Bielorussia»).

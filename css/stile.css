@@ -305,3 +305,15 @@ html[data-font='dislessia'] .foglio { font-family: 'OpenDyslexic', 'Comic Sans M
 html.righello-attivo .righello { display: block; }
 
 html.testata-statica .testata { position: static; }
+
+/* ===== Editor ===== */
+.editor-layout { display: grid; gap: 1rem; grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr); align-items: start; }
+@media (max-width: 900px) { .editor-layout { grid-template-columns: 1fr; } }
+.editor-lista { list-style: none; margin: .6rem 0 0; padding: 0; max-height: 70vh; overflow-y: auto; display: flex; flex-direction: column; gap: .3rem; }
+.editor-voce { width: 100%; text-align: left; font: inherit; padding: .5rem .7rem; border: 2px solid var(--bordo); border-radius: 10px; background: var(--sfondo); color: var(--testo); cursor: pointer; display: flex; flex-direction: column; }
+.editor-voce.attiva { border-color: var(--primario); background: var(--scheda); }
+.ev-titolo { font-weight: 700; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.editor-form { background: var(--scheda); border: 2px solid var(--bordo); border-radius: var(--raggio); padding: 1rem 1.3rem; }
+.campo { display: flex; flex-direction: column; gap: .2rem; margin: .8rem 0; }
+.campo label { font-weight: 700; }
+.campo input[type='text'], .campo input[type='number'], .campo select, .campo textarea { width: 100%; }
