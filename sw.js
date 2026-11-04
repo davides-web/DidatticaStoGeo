@@ -3,7 +3,7 @@
 // Strategia: prima la copia salvata (veloce), intanto si scarica quella nuova per la volta dopo.
 
 // <GENERATO>
-const VERSIONE = '08738a4031';
+const VERSIONE = 'cd4f635094';
 const FILE_APP = [
   "./",
   "index.html",
@@ -21,6 +21,7 @@ const FILE_APP = [
   "js/voce.js",
   "contenuti/indice.json",
   "contenuti/storia-1.json",
+  "contenuti/storia-2.json",
   "fonts/atkinson-hyperlegible-latin-400-normal.woff2",
   "fonts/atkinson-hyperlegible-latin-700-normal.woff2",
   "fonts/opendyslexic-latin-400-normal.woff2",

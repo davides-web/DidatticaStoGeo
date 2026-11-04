@@ -74,3 +74,79 @@ Ho scritto i contenuti con cura, ma non sono un manuale e non sostituiscono la v
 - [ ] **Peste «arrivata con le navi» in Sicilia nel 1347**: ricostruzione tradizionale (Messina).
 - [ ] **Decameron «1349-1353 circa»**: data di composizione approssimativa.
 - [ ] «Persecuzioni degli ebrei»: ho scelto di non descriverle nelle schede; valuta se aggiungere un approfondimento.
+
+## Storia, classe seconda
+
+### Umanesimo e Rinascimento
+- [ ] **Cupola del Brunelleschi 1436**: data della chiusura della cupola e consacrazione; la lanterna è del 1461.
+- [ ] **Lorenzo Valla 1440**: data tradizionale del *De falso credita et ementita Constantini donatione*.
+- [ ] **Bibbia di Gutenberg «1455 circa»**; **Il Principe «1513»**: anno di composizione (pubblicazione postuma, 1532).
+- [ ] **I Medici dal 1434**: signoria «di fatto», Firenze restava formalmente una repubblica.
+- [ ] La *Gioconda* e *La scuola di Atene* nelle domande di abbinamento: attribuzioni consolidate.
+
+### Le scoperte geografiche
+- [ ] **«Scoperta» dell'America**: ho usato «arriva ai Caraibi» e ho sottolineato l'impatto sulle popolazioni indigene; verifica il lessico (invasione, conquista, incontro) che preferisci.
+- [ ] **12 ottobre 1492**: data dello sbarco (calendario giuliano).
+- [ ] **Magellano**: morì nel 1521 nelle Filippine; il giro del mondo fu completato da Elcano. Nelle domande è scritto «spedizione di Magellano».
+- [ ] **Pizarro 1532-33**: cattura di Atahualpa nel 1532, condanna nel 1533.
+- [ ] **Dias 1488 / Vasco da Gama 1498**: date canoniche.
+- [ ] Cortés **1521** (caduta di Tenochtitlan): numerosi alleati indigeni dei conquistatori, non citati per brevità.
+
+### Riforma e Controriforma
+- [ ] **31 ottobre 1517**: l'affissione delle tesi sulla porta della chiesa è tradizione, discussa dagli storici.
+- [ ] **Scelte della «sola fide»** e **predestinazione** sono sintesi molto semplificate.
+- [ ] **Compagnia di Gesù 1540**: approvazione papale.
+- [ ] **Notte di San Bartolomeo**: contenuto delicato (violenza di massa); nelle schede è descritta in modo sobrio.
+- [ ] **Editto di Nantes 1598**.
+
+### Stati moderni e assolutismo
+- [ ] **«Re Sole»** e Versailles: la frase «Lo Stato sono io» **non è** citata (probabilmente apocrifa).
+- [ ] **Luigi XIV 1661**: governo personale dopo la morte di Mazarino.
+- [ ] **Gloriosa rivoluzione 1688-89** e **Bill of Rights 1689**.
+- [ ] **Guerra dei trent'anni**: «nata come scontro religioso» è una semplificazione.
+- [ ] **Armada 1588**: «sconfitta» per tempeste e battaglie navali insieme.
+
+### La rivoluzione scientifica
+- [ ] **1543** per Copernico e Vesalio; **1609-1610** per Galileo/Keplero (Astronomia nova 1609).
+- [ ] **Galileo**: la formula «abiura» e il processo del 1633 sono presentati in modo sintetico; evita la frase «eppur si muove» (leggendaria), non presente.
+- [ ] **Giordano Bruno 1600**: la condanna ha motivazioni teologiche oltre che scientifiche.
+- [ ] **Royal Society 1660** (carta reale 1662).
+
+### L'Illuminismo
+- [ ] **Locke 1689** inserito come precursore, anche se in senso stretto non è un illuminista.
+- [ ] **Kant 1784**: citazione parafrasata («Sapere aude»).
+- [ ] **Toscana 1786**: abolizione della pena di morte (Leopoldina, 30 novembre 1786), poi parzialmente rimessa.
+
+### La rivoluzione americana
+- [ ] **Stamp Act 1765**, **Boston Tea Party 1773**, **Yorktown 1781**.
+- [ ] La sintesi segnala **schiavitù e esclusioni**: verifica il livello di approfondimento adatto alla classe.
+- [ ] **Bill of Rights 1791** (primi dieci emendamenti): citato in sintesi.
+
+### La rivoluzione francese
+- [ ] **«Terrore 1793-1794»**: la data d'inizio è discussa (settembre 1793 o giugno 1793).
+- [ ] **Costituzione del 1791**: presentata come «monarchia costituzionale».
+- [ ] **Olympe de Gouges** non è citata: puoi aggiungerla come collegamento a Educazione civica.
+
+### Napoleone
+- [ ] **Codice civile 1804** e **incoronazione 2 dicembre 1804**.
+- [ ] **«Repubblica Cisalpina»**: nel 1797 fu creata dopo la Campagna d'Italia.
+- [ ] Le espressioni «regno d'Italia (capitale Milano)» e «regno di Napoli» sono semplificazioni dei vari assetti 1802-1815.
+
+### La Restaurazione
+- [ ] **«Sette Stati» italiani**: il numero dipende da come si contano i ducati minori.
+- [ ] **Belgio 1830-31** e **Grecia 1821-1829**: date convenzionali (riconoscimento internazionale più tardi).
+- [ ] **Santa Alleanza settembre 1815**: formalmente tra Russia, Austria e Prussia.
+
+### La rivoluzione industriale
+- [ ] **1764 «circa»** per la giannetta (brevettata nel 1770); **1769** brevetto di Watt (condensatore separato).
+- [ ] **1785** per il telaio meccanico di Cartwright (brevetto).
+- [ ] **Luddisti 1811-1813**.
+- [ ] **Factory Act 1833**: restrizioni per i bambini nelle fabbriche tessili.
+- [ ] **«Metà del Settecento»** come inizio: molti manuali indicano il 1760-1780.
+
+### L'inizio del Risorgimento
+- [ ] **Tricolore 7 gennaio 1797** (Repubblica Cispadana).
+- [ ] **Giovine Italia 1831**, fondata a Marsiglia.
+- [ ] **Gioberti 1843** (*Del primato morale e civile degli Italiani*).
+- [ ] **Statuto 4 marzo 1848**, **Cinque giornate 18-22 marzo 1848**.
+- [ ] I moti «1820-21» e «1831» sono sintesi: i dettagli cambiano da Stato a Stato.
