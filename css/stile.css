@@ -317,3 +317,14 @@ html.testata-statica .testata { position: static; }
 .campo { display: flex; flex-direction: column; gap: .2rem; margin: .8rem 0; }
 .campo label { font-weight: 700; }
 .campo input[type='text'], .campo input[type='number'], .campo select, .campo textarea { width: 100%; }
+
+/* Telefoni: i menu a tendina e i campi non devono allargare la pagina */
+select { max-width: 100%; text-overflow: ellipsis; }
+.barra label { max-width: 100%; min-width: 0; flex-wrap: wrap; }
+.editor-layout > * { min-width: 0; }
+@media (max-width: 900px) { .editor-layout { grid-template-columns: minmax(0, 1fr); } .mappa-layout { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 700px) {
+  .barra label, .barra label select, .barra label input[type='text'], .barra label input[type='number'], .barra select, .barra input[type='search'] { width: 100%; }
+  main { padding-left: .8rem; padding-right: .8rem; }
+}
+@media screen and (max-width: 700px) { .foglio { padding: 1rem; } .int-riga { flex-wrap: wrap; } .abbina-stampa { grid-template-columns: 1fr; } }

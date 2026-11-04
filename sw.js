@@ -3,7 +3,7 @@
 // Strategia: prima la copia salvata (veloce), intanto si scarica quella nuova per la volta dopo.
 
 // <GENERATO>
-const VERSIONE = 'cf8d9acd4e';
+const VERSIONE = 'a57932d937';
 const FILE_APP = [
   "./",
   "index.html",

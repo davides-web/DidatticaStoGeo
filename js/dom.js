@@ -17,8 +17,8 @@ export function h(tag, attrs = {}, ...figli) {
   return el;
 }
 
-/** Aggiunge figli (testi, nodi o elenchi annidati) a un elemento. */
-export function aggiungi(el, figli) {
+/** Aggiunge figli (testi, nodi o elenchi annidati) a un elemento: ignora null, undefined e false. */
+export function aggiungi(el, ...figli) {
   for (const f of figli.flat(Infinity)) {
     if (f === null || f === undefined || f === false) continue;
     el.append(f instanceof Node ? f : document.createTextNode(String(f)));

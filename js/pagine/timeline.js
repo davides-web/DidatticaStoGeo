@@ -1,5 +1,5 @@
 // Pagina "Linee del tempo": esplora, confronta due linee, gioco di riordino.
-import { h, sostituisci } from '../dom.js';
+import { h, sostituisci, aggiungi } from '../dom.js';
 import { NOMI_MATERIA } from '../core/contenuti.js';
 import { formattaAnno, estremi, assegnaCorsie, posizioneX, tacche, eventiDiSelezione, eventiDiLinea,
   scegliPerGioco, controllaOrdine, nomeLinea, ordinaEventi } from '../core/timeline.js';
@@ -74,7 +74,7 @@ function esplora(zona) {
   const tutti = eventiDiSelezione(c, stato.selezione);
   const linee = [...new Set(tutti.map((e) => e.linea || 'altro'))];
   const visibili = tutti.filter((e) => !stato.nascoste.has(e.linea || 'altro'));
-  zona.append(
+  aggiungi(zona,
     h('div', { class: 'barra' }, h('label', {}, 'Periodo: ', selettorePeriodo(stato.selezione, (v) => { stato.selezione = v; stato.nascoste.clear(); stato.ridisegna(); })), controlliZoom()),
     linee.length > 1 ? h('div', { class: 'barra', role: 'group', 'aria-label': 'Linee da mostrare' },
       linee.map((l) => h('label', { class: `chip-linea linea-${l}` }, h('input', { type: 'checkbox', checked: !stato.nascoste.has(l),
@@ -98,7 +98,7 @@ function confronta(zona) {
   sc.value = String(classe);
   const evA = eventiDiLinea(c, a, classe);
   const evB = eventiDiLinea(c, b, classe);
-  zona.append(
+  aggiungi(zona,
     h('div', { class: 'barra' }, h('label', {}, 'Linea in alto: ', sel('a')), h('label', {}, 'Linea in basso: ', sel('b')), h('label', {}, 'Periodo: ', sc), controlliZoom()),
     h('p', { class: 'tenue' }, 'Le due linee usano lo stesso asse del tempo: scorri per confrontare cosa succedeva nello stesso momento.'),
     evA.length + evB.length ? tracciato([{ eventi: evA, titolo: nomeLinea(a) }, { eventi: evB, titolo: nomeLinea(b) }], estremi([...evA, ...evB])) : h('div', { class: 'vuoto' }, 'Nessun evento per queste linee.'));
@@ -176,7 +176,7 @@ function gioco(zona) {
     [4, 5, 6, 8, 10].map((n) => h('option', { value: n }, `${n} eventi`)));
   sn.value = String(g.n);
   const esito = h('div', { class: 'esito', 'aria-live': 'polite' });
-  zona.append(
+  aggiungi(zona,
     h('div', { class: 'barra' }, h('label', {}, 'Periodo: ', selettorePeriodo(stato.selezione, (v) => { stato.selezione = v; ricomincia(); })), h('label', {}, sn),
       h('button', { class: 'btn', onclick: ricomincia }, '🔀 Nuova partita')),
     h('p', {}, 'Trascina le schede (o usa le frecce) per metterle in ordine: dal più ', h('strong', {}, 'antico'), ' in alto al più ', h('strong', {}, 'recente'), ' in basso.'),

@@ -5,7 +5,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "test": "node --test \"test/*.test.js\"",
+    "test": "node --test",
     "aggiorna-sw": "node strumenti/aggiorna-sw.js"
   },
   "license": "MIT"

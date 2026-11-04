@@ -1,5 +1,5 @@
 // Quiz individuale: una domanda alla volta, correzione immediata e spiegazione.
-import { h, sostituisci } from '../dom.js';
+import { h, sostituisci, aggiungi } from '../dom.js';
 import { controllaRisposta, soluzioneTesto, conVuoto, coppieGiuste, NOMI_TIPO } from '../core/quiz.js';
 import { lettera, mescola } from '../core/utils.js';
 import { leggi, fermaLettura } from '../voce.js';
@@ -35,7 +35,7 @@ export function avvia(radice, { domande, esci }) {
     const fatto = !!risposta;
     if (d.tipo === 'scelta' || d.tipo === 'vf') {
       const voci = d.tipo === 'scelta' ? d.opzioni.map((o, i) => [i, o]) : [[true, 'Vero'], [false, 'Falso']];
-      dove.append(h('div', { class: 'quiz-opzioni' }, voci.map(([val, testo], i) => {
+      aggiungi(dove, h('div', { class: 'quiz-opzioni' }, voci.map(([val, testo], i) => {
         const giusta = val === d.corretta;
         return h('button', { class: 'btn quiz-opzione' + (fatto ? (giusta ? ' ok' : (risposta.scelta === val ? ' no' : '')) : ''), disabled: fatto,
           onclick: () => rispondi(d, val, controllaRisposta(d, val)) }, d.tipo === 'scelta' ? h('span', { class: 'lim-lettera' }, lettera(i)) : null, testo);
@@ -43,13 +43,13 @@ export function avvia(radice, { domande, esci }) {
     } else if (d.tipo === 'completa') {
       const campo = h('input', { type: 'text', 'aria-label': 'La tua risposta', autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false', disabled: fatto, value: fatto ? risposta.scelta : '' });
       campo.addEventListener('keydown', (e) => { if (e.key === 'Enter' && campo.value.trim()) rispondi(d, campo.value, controllaRisposta(d, campo.value)); });
-      dove.append(h('div', { class: 'barra' }, campo, fatto ? null : h('button', { class: 'btn primario', onclick: () => { if (campo.value.trim()) rispondi(d, campo.value, controllaRisposta(d, campo.value)); } }, 'Controlla')),
+      aggiungi(dove, h('div', { class: 'barra' }, campo, fatto ? null : h('button', { class: 'btn primario', onclick: () => { if (campo.value.trim()) rispondi(d, campo.value, controllaRisposta(d, campo.value)); } }, 'Controlla')),
         d.distrattori && !fatto ? h('p', { class: 'tenue' }, 'Aiuto: la parola è una tra ', mescola([d.risposta, ...d.distrattori]).map((p, i, a) => h('strong', {}, p, i < a.length - 1 ? ' · ' : '')), '') : null);
       if (!fatto) setTimeout(() => campo.focus(), 0);
     } else if (d.tipo === 'abbina') {
       const scelte = d.sinistra.map((s, i) => h('select', { 'aria-label': `Abbinamento per ${s}`, disabled: fatto },
         h('option', { value: '' }, '— scegli —'), d.destra.map((x) => h('option', { value: x, selected: fatto && risposta.scelta[i] === x }, x))));
-      dove.append(h('div', { class: 'quiz-abbina' }, d.sinistra.map((s, i) => h('label', {}, h('strong', {}, `${i + 1}. ${s}`), scelte[i]))),
+      aggiungi(dove, h('div', { class: 'quiz-abbina' }, d.sinistra.map((s, i) => h('label', {}, h('strong', {}, `${i + 1}. ${s}`), scelte[i]))),
         fatto ? null : h('button', { class: 'btn primario', onclick: () => {
           const r = scelte.map((sel) => sel.value);
           if (r.some((x) => !x)) { alert('Completa tutti gli abbinamenti.'); return; }
