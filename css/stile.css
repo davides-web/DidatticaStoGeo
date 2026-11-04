@@ -197,3 +197,64 @@ html[data-tema='scuro'] .livello-linee .forma { stroke: #60a5fa; } html[data-tem
 .scheda-nome .nome-grande { font-size: 2rem; display: block; }
 .domanda-mappa { font-size: 2rem; font-weight: 700; line-height: 1.25; background: var(--primario); color: var(--su-primario); padding: .8rem 1rem; border-radius: var(--raggio); }
 .punteggio-grande { font-size: 3.5rem; font-weight: 700; margin: 0; }
+
+/* ===== Quiz ===== */
+.elenco-colonne { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: .2rem .8rem; }
+.piccolo { font-size: .85em; }
+.griglia-nomi { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .6rem; margin: .8rem 0; }
+.quiz-ind { max-width: 1000px; }
+.quiz-testo { font-size: 1.7rem; font-weight: 700; display: flex; gap: .8rem; align-items: flex-start; justify-content: space-between; max-width: none; }
+.quiz-opzioni { display: grid; gap: .7rem; margin: 1rem 0; }
+.quiz-opzione { justify-content: flex-start; text-align: left; font-size: 1.3rem; padding: .8rem 1.2rem; }
+.quiz-abbina { display: grid; gap: .6rem; margin: 1rem 0; }
+.quiz-abbina label { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .8rem; align-items: center; }
+.quiz-abbina select.esatta { border-color: var(--ok); background: var(--ok-sfondo); } .quiz-abbina select.errata { border-color: var(--no); background: var(--no-sfondo); }
+.quiz-feedback { margin-top: 1rem; font-size: 1.25rem; }
+progress { width: min(260px, 100%); height: 1.2rem; accent-color: var(--primario); }
+.lim-lettera { display: inline-grid; place-items: center; min-width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--primario); color: var(--su-primario); margin-right: .7rem; font-weight: 700; flex: none; }
+.btn.ok .lim-lettera, .btn.no .lim-lettera { background: currentColor; }
+
+/* Flashcard */
+.flash { max-width: 900px; margin: 0 auto; }
+.carta { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1rem; width: 100%; min-height: 330px; padding: 1.5rem; border-radius: 24px; border: 4px solid var(--bordo); background: var(--scheda); color: var(--testo); font: inherit; cursor: pointer; text-align: center; box-shadow: var(--ombra); }
+.carta.girata { background: var(--sfondo); border-color: var(--primario); }
+.carta-etichetta { text-transform: uppercase; letter-spacing: .1em; font-weight: 700; color: var(--primario); }
+.carta-testo { font-size: clamp(1.6rem, 3.6vw, 2.6rem); font-weight: 700; line-height: 1.3; }
+.carta-extra { display: flex; flex-direction: column; gap: .5rem; font-size: 1.2rem; max-width: 60ch; }
+
+/* ===== LIM a squadre: tutto schermo ===== */
+body.lim-aperto { overflow: hidden; }
+.lim { position: fixed; inset: 0; z-index: 60; background: var(--sfondo); color: var(--testo); display: flex; flex-direction: column; overflow-y: auto; }
+.lim-testata { display: flex; flex-wrap: wrap; gap: .6rem; align-items: stretch; justify-content: space-between; padding: .7rem 1rem; background: var(--scheda); border-bottom: 3px solid var(--bordo); }
+.lim-squadre { display: flex; flex-wrap: wrap; gap: .6rem; }
+.lim-squadra { display: flex; flex-direction: column; align-items: center; min-width: 9rem; padding: .3rem 1rem; border-radius: 14px; border: 4px solid var(--colore); background: var(--sfondo); color: var(--testo); font: inherit; cursor: pointer; }
+.lim-squadra.corrente { background: var(--colore); color: #fff; box-shadow: 0 0 0 4px var(--sfondo), 0 0 0 8px var(--colore); }
+.lim-squadra[disabled] { opacity: 1; cursor: default; }
+.lim-nome { font-weight: 700; font-size: 1.1rem; } .lim-punti { font-size: 2.4rem; font-weight: 700; line-height: 1.1; }
+.lim-strumenti { display: flex; gap: .6rem; align-items: center; }
+.lim-timer { display: flex; align-items: center; gap: .6rem; font-size: 2.4rem; font-weight: 700; }
+.lim-timer.urgente { color: var(--no); animation: pulsa 1s infinite; }
+@keyframes pulsa { 50% { opacity: .5; } }
+.lim-timer-barra { display: block; width: 8rem; height: 1rem; background: var(--bordo); border-radius: 999px; overflow: hidden; } .lim-timer-barra span { display: block; height: 100%; background: var(--primario); transition: width .25s linear; }
+.lim-centro { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 1.2rem; padding: 1.5rem clamp(1rem, 4vw, 4rem); max-width: 1700px; width: 100%; margin: 0 auto; }
+.lim-info { font-size: 1.3rem; margin: 0; max-width: none; }
+.lim-domanda { font-size: clamp(2rem, 4.6vw, 4.6rem); font-weight: 700; line-height: 1.2; margin: 0; max-width: none; }
+.lim-opzioni { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.lim-opzioni.vf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 800px) { .lim-opzioni { grid-template-columns: 1fr; } }
+.lim-opzione { display: flex; align-items: center; text-align: left; gap: .6rem; min-height: 6.5rem; padding: .8rem 1.4rem; font: inherit; font-size: clamp(1.4rem, 2.8vw, 2.8rem); font-weight: 700; border-radius: 20px; border: 4px solid var(--bordo); background: var(--scheda); color: var(--testo); cursor: pointer; }
+.lim-opzione .lim-lettera { min-width: 3.2rem; height: 3.2rem; font-size: 1.8rem; }
+.lim-opzione:hover:not([disabled]) { border-color: var(--primario); }
+.lim-opzioni.vf .lim-opzione { justify-content: center; }
+.lim-opzione.giusta { background: var(--ok-sfondo); color: var(--ok); border-color: var(--ok); }
+.lim-opzione.sbagliata { background: var(--no-sfondo); color: var(--no); border-color: var(--no); }
+.lim-opzione.spenta { opacity: .45; }
+.lim-opzione[disabled] { cursor: default; }
+.lim-esito { font-size: clamp(1.3rem, 2.4vw, 2.2rem); max-width: none; }
+.lim-soluzione { font-size: clamp(1.6rem, 3vw, 3rem); margin: 1rem 0; padding: 1rem 1.4rem; border-radius: 16px; background: var(--ok-sfondo); color: var(--ok); }
+.lim-abbina { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; font-size: clamp(1.4rem, 2.6vw, 2.4rem); }
+.lim-lista { margin: 0; padding-left: 2rem; } .lim-lista li { margin: .4rem 0; }
+.lim-lista.lettere { list-style: none; padding: 0; } .lim-lista.lettere li::before { content: attr(data-l) '. '; font-weight: 700; color: var(--primario); }
+.lim-finale { text-align: center; align-items: center; }
+.lim-vincitore { font-size: clamp(2.5rem, 7vw, 6rem); font-weight: 700; margin: 0; color: var(--primario); }
+.lim-classifica { font-size: clamp(1.5rem, 3vw, 2.6rem); list-style: none; padding: 0; display: flex; flex-direction: column; gap: .6rem; } .lim-classifica li { padding: .4rem 1.4rem; background: var(--scheda); border-radius: 14px; }
