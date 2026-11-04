@@ -150,3 +150,29 @@ Ho scritto i contenuti con cura, ma non sono un manuale e non sostituiscono la v
 - [ ] **Gioberti 1843** (*Del primato morale e civile degli Italiani*).
 - [ ] **Statuto 4 marzo 1848**, **Cinque giornate 18-22 marzo 1848**.
 - [ ] I moti «1820-21» e «1831» sono sintesi: i dettagli cambiano da Stato a Stato.
+
+## Geografia, classe prima
+
+- [ ] **Soglie di altitudine** (pianura < 200 m, collina 200-600 m, montagna > 600 m): sono quelle dei manuali scolastici; le classificazioni ufficiali (ISTAT) usano criteri diversi.
+- [ ] **Scala 1:100.000 / 1:50.000** negli esempi di calcolo.
+- [ ] **Monte Bianco «circa 4.800 m»**: la quota esatta è oggetto di misurazioni periodiche (circa 4.806 m); è citato come «la più alta delle Alpi» (il confine con la Francia sulla vetta è discusso).
+- [ ] **Corno Grande 2.912 m**, **Po circa 650 km** (652), **Garda lago più grande**.
+- [ ] **Etna «vulcano attivo più alto d'Europa»**.
+- [ ] **«Cinque regioni a statuto speciale»**: Valle d'Aosta, Trentino-Alto Adige, Friuli-Venezia Giulia, Sicilia, Sardegna.
+- [ ] **Popolazione**: «oltre 8 miliardi» (mondo), «circa 59 milioni» (Italia), «circa 195 ab/km²», Roma «circa 2,8 milioni»: dati approssimati che cambiano ogni anno; aggiornali con i dati ISTAT/ONU più recenti.
+- [ ] **«Oltre i due terzi degli occupati nel terziario»**: ordine di grandezza (circa 70%).
+- [ ] **Gradiente termico «circa 6 °C ogni 1000 m»** (media).
+- [ ] **Climi**: la classificazione in zone «calda, temperata, fredda» è semplificata (non è la classificazione di Köppen).
+- [ ] **Riscaldamento globale**: nelle schede non cito cifre precise.
+- [ ] **Divario Nord-Sud**: formulazione sintetica; valuta il linguaggio più adatto.
+
+## Educazione civica
+
+- [ ] **Articoli della Costituzione** citati (artt. 1, 2, 3, 4, 8, 11, 19, 21, 35, 36, 37, 39, 40, 52, 53): controlla la corrispondenza con il testo vigente.
+- [ ] **Cittadinanza italiana**: ho citato solo lo *ius sanguinis* e «altri modi previsti dalla legge», perché la normativa è oggetto di dibattito e modifiche.
+- [ ] **Voto alle donne**: nel referendum del 2 giugno 1946 votarono per la prima volta a livello nazionale (già alle amministrative del marzo 1946).
+- [ ] **Istruzione obbligatoria fino a 16 anni** (10 anni di scuola dal 2007): controlla se vuoi citare anche l'età minima di lavoro (16 anni, con eccezioni).
+- [ ] **Convivenza nel Medioevo** (Andalusia, Sicilia): descrizione sintetica; gli storici discutono quanto fosse «tolleranza» nel senso moderno.
+- [ ] **Convenzione ONU 1989** sui diritti dell'infanzia.
+- [ ] **Dichiarazione dei diritti della donna 1791** (Olympe de Gouges): presentata come testo di rivendicazione.
+- [ ] I **collegamenti** (campo `collegamenti`) tra argomenti di Educazione civica e di storia sono miei suggerimenti: modificali liberamente.

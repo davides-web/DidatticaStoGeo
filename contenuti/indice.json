@@ -1,6 +1,6 @@
 {
   "versione": 1,
   "descrizione": "Elenco dei file di contenuto. Per aggiungerne uno nuovo, scrivi qui il suo nome (vedi README).",
-  "pacchetti": ["storia-1.json", "storia-2.json"],
+  "pacchetti": ["storia-1.json", "storia-2.json", "geografia-1.json", "civica.json"],
   "mappe": []
 }
