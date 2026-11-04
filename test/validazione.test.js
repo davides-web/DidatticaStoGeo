@@ -65,3 +65,14 @@ test('i contenuti reali del repository sono validi', async () => {
   const c = await caricaReali();
   assert.deepEqual(c.errori, [], c.errori.join('\n'));
 });
+
+test('contenuti reali: ogni argomento ha sintesi, versione semplificata e almeno 3 termini di glossario', async () => {
+  const c = await caricaReali();
+  assert.ok(c.argomenti.length >= 30);
+  for (const a of c.argomenti) {
+    assert.ok(a.sintesi.length > 300, `${a.id}: sintesi troppo breve`);
+    assert.ok(a.semplificata.length > 150 && a.semplificata.length < a.sintesi.length, `${a.id}: versione semplificata`);
+    assert.ok(c.glossario.filter((g) => g.argomento === a.id).length >= 3, `${a.id}: glossario`);
+  }
+  assert.deepEqual(c.avvisi, [], c.avvisi.join('\n')); // 8-12 domande e 6-10 eventi/concetti per argomento
+});

@@ -3,7 +3,7 @@
 // Strategia: prima la copia salvata (veloce), intanto si scarica quella nuova per la volta dopo.
 
 // <GENERATO>
-const VERSIONE = '7e41bd5642';
+const VERSIONE = '19bf892eff';
 const FILE_APP = [
   "./",
   "index.html",
@@ -20,6 +20,7 @@ const FILE_APP = [
   "js/core/utils.js",
   "js/core/validazione.js",
   "js/dom.js",
+  "js/pagine/glossario.js",
   "js/pagine/home.js",
   "js/pagine/mappe.js",
   "js/pagine/quiz.js",
